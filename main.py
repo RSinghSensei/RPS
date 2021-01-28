@@ -9,7 +9,8 @@ import random
 
 compScore = 0
 playerScore = 0
-c_ops = ["Rock", "Paper", "Scissors"]
+test2 = ["Rock", "Paper", "Scissors"]
+
 
 
 def rps_init():
@@ -23,35 +24,48 @@ def rps_init():
     sleep(1)
 
     print("Rock\tPaper\tScissors")
-    while playerScore != 3 and compScore!=3:
-        userchoice = input("Enter your choice")
-        if userchoice == "Rock":
-            if random.choice(c_ops) == "Paper":
-                print("Computer player chose Paper, 1 point to computer")
+    while playerScore < 3 and compScore < 3:
+        test = input("Enter your choice: ")
+        if test == "Rock":
+            j = (random.choice(test2))
+            print(j)
+            if j == "Paper":
+                print("Opponents Choice: Paper \n 1 point to computer")
                 compScore+=1
-            elif random.choice(c_ops) == "Rock":
+                print(playerScore)
+            elif j == "Rock":
                 print("Computer player chose Rock as well, play again")
-            elif random.choice(c_ops) == "Scissors":
+            elif j == "Scissors":
                 print("Computer player chose Scissors, 1 point to you")
                 playerScore+=1
-        if userchoice == "Paper":
-            if random.choice(c_ops) == "Paper":
+                print(playerScore)
+        if test == "Paper":
+            k = (random.choice(test2))
+            print(k)
+            if k == "Paper":
                 print("Computer player chose Paper as well, play again")
-            elif random.choice(c_ops) == "Rock":
+            elif k == "Rock":
                 print("Computer player chose Rock, 1 point to you")
                 playerScore+=1
-            elif random.choice(c_ops) == "Scissors":
+                print(playerScore)
+            elif k == "Scissors":
                 print("Computer player chose Scissors, 1 point to computer")
                 compScore+=1
-        if userchoice == "Scissors":
-            if random.choice(c_ops) == "Paper":
+                print(playerScore)
+        if test == "Scissors":
+            z = (random.choice(test2))
+            print(z)
+            if z == "Paper":
                 print("Computer player chose Paper, 1 point to you")
                 playerScore+=1
-            elif random.choice(c_ops) == "Rock":
+                print(playerScore)
+            elif z == "Rock":
                 print("Computer player chose Rock, 1 point to computer")
                 compScore+=1
-            elif random.choice(c_ops) == "Scissors":
+                print(playerScore)
+            elif z == "Scissors":
                 print("Computer player chose Scissors as well, play again")
+
     if playerScore == 3:
         print("Congratulations, you won! Play one more round?")
     elif compScore == 3:
